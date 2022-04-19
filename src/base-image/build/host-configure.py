@@ -28,7 +28,7 @@ import argparse
 def load_yaml_config(config_path):
 
     with open(config_path, "r") as f:
-        cluster_data = yaml.load(f)
+        cluster_data = yaml.load(f, Loader=yaml.SafeLoader)
 
     return cluster_data
 
